@@ -1,0 +1,54 @@
+.parent {
+    background-color: aquamarine;
+    padding: 10px;
+    // position: relative;
+    height: 200vh;
+    font-size: 20px;
+}
+
+.one{
+    background-color: chartreuse;
+    // position: absolute;
+    font-size: 2em;
+    margin: 10px;
+    
+}
+
+.child{
+    font-size: 2em;
+}
+
+.two {
+    background-color: cadetblue;
+    position: relative;
+    top: 5px;
+    left: 50px;
+    font-size: 1rem;
+}
+
+.three {
+    background-color: chocolate;
+    position: sticky;
+    top: 0;
+    font-size: 2rem;
+}
+
+.four{
+    background-color: cornflowerblue;
+    position: fixed;
+    // left: 15px;
+    top: 200px;
+    z-index: 1;
+}
+
+span{
+    height: 10px;
+    width: 50px;
+    font-size: 2rem;
+    background-color: crimson;
+}
+
+button{
+    width: 50px;
+    height: 50px;
+}
