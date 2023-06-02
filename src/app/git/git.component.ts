@@ -10,5 +10,6 @@ export class GitComponent {
 
   resB:number = 1;
   resC:number = 1;
-  text: string = 'abc'
+  text: string = 'abc';
+  textA: string = 'abc';
 }
