@@ -8,4 +8,6 @@ import { Component } from '@angular/core';
 export class GitComponent {
   res:number = 1;
   res2:number = 1;
+
+  text:string = 'qwe'
 }
