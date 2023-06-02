@@ -13,6 +13,7 @@ import { MaterialsComponent } from './materials/materials.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { GmailComponent } from './gmail/gmail.component';
+import { GitComponent } from './git/git.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { GmailComponent } from './gmail/gmail.component';
     AsyncComponent,
     AddProductComponent,
     MaterialsComponent,
-    GmailComponent
+    GmailComponent,
+    GitComponent
   ],
   imports: [
     BrowserModule,

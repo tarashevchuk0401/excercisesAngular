@@ -8,6 +8,7 @@ import { AsyncPipe } from '@angular/common';
 import { AsyncComponent } from './async/async.component';
 import { MaterialsComponent } from './materials/materials.component';
 import { GmailComponent } from './gmail/gmail.component';
+import { GitComponent } from './git/git.component';
 
 const routes: Routes = [
   // {path:"" , component: AppComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path:"async" , component: AsyncComponent },
   {path:"materials" , component: MaterialsComponent },
   {path:"gmail" , component: GmailComponent },
+  {path:"git" , component: GitComponent },
 ];
 
 @NgModule({
