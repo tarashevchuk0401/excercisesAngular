@@ -1,0 +1,250 @@
+<p>materials works!</p>
+<div>
+  <h2>Stepper</h2>
+  <div>
+    <mat-horizontal-stepper linear="">
+      <mat-step label="adress" completed="false">
+        <div>Print </div>
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <mat-label>Favorite food</mat-label>
+            <input [(ngModel)]="inputValue" matInput placeholder="Ex. Pizza">
+            {{inputValue}}
+           
+          </mat-form-field>
+        </form>
+        <button (click)="showInput()">Show</button>
+      </mat-step>
+      <mat-step label="bill" completed="false">
+        <div>GO home !</div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </mat-step>
+      <mat-step label="pay!" completed="false">
+        <div>gudbuy</div>
+      </mat-step>
+    </mat-horizontal-stepper>
+  </div>
+</div>
+<div>
+  <h2>Tab</h2>
+  <div>
+    <mat-tab-group>
+      <!-- <mat-tab-nav-panel>
+       
+      </mat-tab-nav-panel> -->
+      <mat-tab label="Angular">
+        <div>asas</div>
+        <div>asdasd</div>
+        <div>5135465dsaljds</div>
+      </mat-tab>
+      <mat-tab label="react">2</mat-tab>
+      <mat-tab label="vue">3</mat-tab>
+    </mat-tab-group>
+  </div>
+</div>
+
+<div>
+  <h2>Cards</h2>
+  <div>
+    <mat-card>
+      <mat-card-header>Header</mat-card-header>
+      <mat-card-title>TITLE</mat-card-title>
+      <mat-card-content>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus libero animi
+        quae voluptatibus magni! Mollitia nostrum ut quas veritatis voluptas.
+      </mat-card-content>
+      <mat-card-subtitle>Sub</mat-card-subtitle>
+      <mat-card-actions align="end">
+        <button mat-button>GO</button>
+      </mat-card-actions>
+      <mat-card-footer>foter</mat-card-footer>
+    </mat-card>
+  </div>
+</div>
+<div>
+  <h2>Expansion panels</h2>
+  <div>
+    <mat-accordion multi="true">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>Title</mat-panel-title>
+          <mat-panel-description>DESCRIPtiion from muoiy heAARd </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, tenetur?</p>
+        <mat-action-row>asd asd asd asd a</mat-action-row>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>Second</mat-panel-title>
+          <mat-panel-description>DESCRIPtiion from muoiy heAARd </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, tenetur?</p>
+        <mat-action-row>XXXXX</mat-action-row>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>
+<div>
+  <h2>List</h2>
+  <div>
+    <mat-nav-list>
+      <a mat-list-item>
+        <mat-icon matListItemIcon>home</mat-icon>
+        <mat-icon matListItemIcon>star</mat-icon>
+        <mat-checkbox></mat-checkbox>
+        HOME PAGE
+      </a>
+      <a mat-list-item></a>
+    </mat-nav-list>
+    <mat-list dense>
+      <mat-list-item>1</mat-list-item>
+      <mat-list-item>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, quis.</mat-list-item>
+      <mat-list-item>1</mat-list-item>
+      <mat-list-item>Item 1</mat-list-item>
+      <mat-list-item>1</mat-list-item>
+    </mat-list>
+  </div>
+</div>
+<div>
+  <h2>Menu</h2>
+  <div>
+    <mat-menu #appMenu="matMenu" xPosition="after" yPosition="above">
+      <button mat-menu-item [matMenuTriggerFor]="subMenu">1</button>
+      <button mat-menu-item>2</button>
+    </mat-menu>
+    <button mat-flat-button [matMenuTriggerFor]="appMenu">Menu</button>
+    <hr>
+    <mat-menu #subMenu="matMenu">
+      <button mat-menu-item>React</button>
+      <button mat-menu-item>Angular</button>
+      <button mat-menu-item>Vue</button>
+    </mat-menu>
+    <mat-menu #lazyMenu="matMenu">
+      <ng-template matMenuContent let-name="name">
+        <button mat-raised-button>Settings</button>
+        <button mat-raised-button>Log out {{name}}</button>
+      </ng-template>
+    </mat-menu>
+    <button mat-raised-button [matMenuTriggerFor]="lazyMenu" [matMenuTriggerData]="{name: 'vishwas'}">Vishwas</button>
+    <button mat-raised-button [matMenuTriggerFor]="lazyMenu" [matMenuTriggerData]="{name: 'evol'}">Evol</button>
+  </div>
+</div>
+<div>
+  <h2>Sidenav</h2>
+  <div>
+    <mat-sidenav-container>
+      <mat-sidenav #sidenav mode="push" [(opened)]="opened">Start</mat-sidenav>
+      <!-- <mat-sidenav position="end">Start 2</mat-sidenav>
+      <mat-sidenav position="start">Start 2</mat-sidenav> -->
+      <mat-sidenav-content>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut eos mollitia
+        libero beatae quod rem hic quis
+        praesentium. Cum, libero!
+        <mat-button-toggle (click)="opened =! opened">
+          <mat-icon>menu</mat-icon>
+        </mat-button-toggle>
+        <button mat-flat-button (click)="sidenav.close() ">closed</button>
+        <button mat-flat-button (click)="sidenav.open()">opened</button>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+  <div>
+    <h2>nav</h2>
+    <div>
+      <mat-toolbar role="toolbar" color="warn">
+        <mat-toolbar-row>
+          <span>Custom Toolbar</span>
+        </mat-toolbar-row>
+        <mat-toolbar-row>
+          <span>Second</span>
+        </mat-toolbar-row>
+        <hr>
+        <hr>
+        <mat-toolbar-row>
+          <span>Second Line</span>
+          <span class="example-spacer"></span>
+          <mat-icon class="example-icon" aria-hidden="false"
+            aria-label="Example user verified icon">verified_user</mat-icon>
+        </mat-toolbar-row>
+
+        <!-- <mat-toolbar-row>
+        <span>Second Line</span>
+        <span class="example-spacer"></span>
+        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
+      </mat-toolbar-row>
+    
+      <mat-toolbar-row>
+        <span>Third Line</span>
+        <span class="example-spacer"></span>
+        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
+        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
+      </mat-toolbar-row> -->
+      </mat-toolbar>
+    </div>
+  </div>
+  <div>
+    <h2>Spinner</h2>
+    <div>
+      <mat-spinner color="red"></mat-spinner>
+      <mat-progress-spinner value="10 "></mat-progress-spinner>
+      <h2>Badges</h2>
+      <div class="demo-section">
+        Button with a badge on the left
+        <button class="action" mat-raised-button color="primary" matBadge="8" matBadgePosition="before"
+          matBadgeColor="accent">
+          Action
+        </button>
+      </div>
+    </div>
+    <div>
+      <h2>button toggle</h2>
+      <h3>Single selection</h3>
+      <mat-button-toggle-group name="favoriteColor" aria-label="Favorite Color" (click)="showColor()"
+        [(ngModel)]="favoriteColor">
+        <mat-button-toggle value="red">Red</mat-button-toggle>
+        <mat-button-toggle value="green">Green</mat-button-toggle>
+        <mat-button-toggle value="blue">Blue</mat-button-toggle>
+      </mat-button-toggle-group>
+
+      <h3>Multiple selection</h3>
+      <mat-button-toggle-group name="ingredients" aria-label="Ingredients" multiple>
+        <mat-button-toggle value="flour">Flour</mat-button-toggle>
+        <mat-button-toggle value="eggs">Eggs</mat-button-toggle>
+        <mat-button-toggle value="sugar">Sugar</mat-button-toggle>
+      </mat-button-toggle-group>
+
+
+      <h3>Language</h3>
+      <mat-button-toggle-group appearance="legacy" (click)="showLanguage()" [(ngModel)]="lang" multiple="1">
+        <mat-button-toggle value="en">EN</mat-button-toggle>
+        <mat-button-toggle value="ua">UA
+          <mat-icon class="flag">abc</mat-icon>
+        </mat-button-toggle>
+      </mat-button-toggle-group>
+
+      <button matBage="8">
+        <mat-icon class="cart" width="50" color="red">shopping_cart</mat-icon>
+      </button>
+      <mat-icon class="checkroom">checkroom</mat-icon>
+
+      <button matBadge="8">
+        <mat-icon>home</mat-icon>
+      </button>
+    </div>
+    <div>
+      <hr>
+      <h2>buttons</h2>
+      <button mat-button matBadgeDescription="desc" matBadgePosition="before" matBadge="5">Basic</button>
+      <button mat-button color="accent">Accent</button>
+      <button mat-raised-button color="primary">r
+        <mat-icon>home</mat-icon>
+        Home
+      </button>
+      <button mat-flat-button>f</button>
+      <button mat-stroked-button color="warn">f</button>
+      <button mat-fab primary>fab</button>
+      <button mat-fab extended aria-disabled="true">
+        <mat-icon>delete</mat-icon>
+        cart
+      </button>
+    </div>

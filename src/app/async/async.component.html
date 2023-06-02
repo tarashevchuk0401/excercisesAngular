@@ -1,0 +1,26 @@
+<p>async works!</p>
+
+<div>result: {{res | async}}</div>
+<div>async : {{async | async}}</div>
+
+<!-- <app-grid></app-grid> -->
+<app-add-product></app-add-product>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>inStock</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of products | async">
+            <td>{{p.Id}}</td>
+            <td>{{p.Title}}</td>
+            <td>{{p.Price}}</td>
+            <td>{{p.inStock}}</td>
+        </tr>
+    </tbody>
+</table>

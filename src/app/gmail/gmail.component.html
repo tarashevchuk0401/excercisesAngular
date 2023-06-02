@@ -1,0 +1,202 @@
+<main>
+    <div class="logo">
+        <button mat-button (click)="opened =! opened">
+            <mat-icon>menu</mat-icon>
+
+        </button>
+        <div>Gmail</div>
+    </div>
+    <mat-sidenav-container>
+        <mat-sidenav #sidenav [(opened)]="opened" mode="side">
+            <mat-menu #writteMenu="matMenu">
+                <button mat-menu-item [matMenuTriggerFor]="adress">New</button>
+                <button mat-menu-item>Edit</button>
+            </mat-menu>
+            <mat-menu #adress="matMenu">
+                <button mat-menu-item>tarashevchuk0401@gmail.com</button>
+                <button mat-menu-item>oksana@gmail.com</button>
+            </mat-menu>
+            <button class="but" mat-raised-button [matMenuTriggerFor]="writteMenu">
+                <mat-icon>edit</mat-icon>
+                Writte
+            </button>
+            <button class="but" mat-flat-button matBadge="23" matBadgePosition="after">
+                <mat-icon class="icon">inbox</mat-icon>
+                <div class="b">Income</div>
+            </button>
+            <button class="but" mat-flat-button matBadge="23" matBadgePosition="after">
+                <mat-icon class="icon">star</mat-icon>
+                Star
+            </button>
+            <button class="but" mat-flat-button>
+                <mat-icon class="icon">send</mat-icon>
+                Send
+            </button>
+            <button mat-flat-button>
+                <mat-icon class="icon">more</mat-icon>
+                More
+            </button>
+            <button mat-flat-button>
+                <mat-icon class="icon">schedule</mat-icon>
+                delay
+            </button>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <section>
+                <mat-form-field class="search">
+                    <div class="search_panel">
+                        <mat-icon>search</mat-icon>
+                        <input matInput type="search">
+                    </div>
+                    <button matSuffix mat-icon-button>
+                        <mat-icon>settings</mat-icon>
+                    </button>
+                </mat-form-field>
+                <mat-button-toggle-group class="top_nav">
+                    <mat-button-toggle class="toggle">
+                        <mat-icon>inbox</mat-icon>
+                        Main
+                    </mat-button-toggle>
+                    <mat-button-toggle class="toggle">
+                        <mat-icon>sell</mat-icon>
+                        Sell
+                    </mat-button-toggle>
+                    <mat-button-toggle class="toggle">
+                        <mat-icon>group</mat-icon>
+                        Network
+                    </mat-button-toggle>
+                </mat-button-toggle-group>
+                <div class="mail">
+                    <mat-checkbox></mat-checkbox>
+                    <div class="text">
+                        <div class="from">
+                            <p>taras@gmail</p>
+                        </div>
+                        <div class="title">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi.
+                            </p>
+                        </div>
+                        <div class="time">12:52</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="mail">
+                        <mat-checkbox></mat-checkbox>
+                        <div class="text">
+                            <div class="from">
+                                <p>taras@gmail</p>
+                            </div>
+                            <div class="title">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi.
+                                </p>
+                            </div>
+                            <div class="time">12:52</div>
+                        </div>
+                    </div>
+                    <div class="mail">
+                        <mat-checkbox></mat-checkbox>
+                        <div class="text">
+                            <div class="from">
+                                <p>taras@gmail</p>
+                            </div>
+                            <div class="title">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi.
+                                </p>
+                            </div>
+                            <div class="time">12:52</div>
+                        </div>
+                    </div>
+                    <div class="mail">
+                        <mat-checkbox></mat-checkbox>
+                        <div class="text">
+                            <div class="from">
+                                <p>taras@gmail</p>
+                            </div>
+                            <div class="title">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi.
+                                </p>
+                            </div>
+                            <div class="time">12:52</div>
+                        </div>
+                    </div>
+                    <div class="mail">
+                        <mat-checkbox></mat-checkbox>
+                        <div class="text">
+                            <div class="from">
+                                <p>taras@gmail</p>
+                            </div>
+                            <div class="title">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi.
+                                </p>
+                            </div>
+                            <div class="time">12:52</div>
+                        </div>
+                    </div>
+                    <div class="mail">
+                        <mat-checkbox></mat-checkbox>
+                        <div class="text">
+                            <div class="from">
+                                <p>taras@gmail</p>
+                            </div>
+                            <div class="title">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi.
+                                </p>
+                            </div>
+                            <div class="time">12:52</div>
+                        </div>
+                    </div>
+                    <div class="mail">
+                        <mat-checkbox></mat-checkbox>
+                        <div class="text">
+                            <div class="from">
+                                <p>taras@gmail</p>
+                            </div>
+                            <div class="title">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi.
+                                </p>
+                            </div>
+                            <div class="time">12:52</div>
+                        </div>
+                    </div>
+                    <div class="mail">
+                        <mat-checkbox></mat-checkbox>
+                        <div class="text">
+                            <div class="from">
+                                <p>taras@gmail</p>
+                            </div>
+                            <div class="title">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi.
+                                </p>
+                            </div>
+                            <div class="time">12:52</div>
+                        </div>
+                    </div>
+                    <div class="mail">
+                        <mat-checkbox></mat-checkbox>
+                        <div class="text">
+                            <div class="from">
+                                <p>taras@gmail</p>
+                            </div>
+                            <div class="title">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi.
+                                </p>
+                            </div>
+                            <div class="time">12:52</div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+    <mat-vertical-stepper>
+        <mat-step label="name">
+            <button mat-button matStepperNext>Next</button>
+        </mat-step>
+        <mat-step label="surname">
+            <button mat-button matStepperPrevious>Back</button>
+
+        </mat-step>
+    </mat-vertical-stepper>
+
+</main>

@@ -5,16 +5,34 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GridComponent } from './grid/grid.component';
 import { PositionComponent } from './position/position.component';
+import { DebugComponent } from './debug/debug.component';
+import { AsyncComponent } from './async/async.component';
+import { AddProductComponent } from './async/add-product/add-product.component';
+import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MaterialsComponent } from './materials/materials.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
+import { GmailComponent } from './gmail/gmail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GridComponent,
-    PositionComponent
+    PositionComponent,
+    DebugComponent,
+    AsyncComponent,
+    AddProductComponent,
+    MaterialsComponent,
+    GmailComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MaterialModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
