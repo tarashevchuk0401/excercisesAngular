@@ -11,11 +11,12 @@ export class GitComponent {
 
   resB:number = 1;
   resC:number = 1;
+  text: string = 'abc';
   textA: string = 'abc';
 
   res:number = 1;
   res2:number = 1;
 
-  text:string = 'qwe'
+  // text:string = 'qwe'
 
 }
