@@ -6,10 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./git.component.scss']
 })
 export class GitComponent {
+
   resA : number = 0;
 
   resB:number = 1;
   resC:number = 1;
-  text: string = 'abc';
   textA: string = 'abc';
+
+  res:number = 1;
+  res2:number = 1;
+
+  text:string = 'qwe'
+
 }
