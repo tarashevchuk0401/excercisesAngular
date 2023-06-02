@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./git.component.scss']
 })
 export class GitComponent {
+  res : number = 0;
 
 }
