@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class GitComponent {
 
   resA : number = 0;
+  resB: number = 1;
 
 
 }
