@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class GitComponent {
 
-  resA : number = 0;
-  resB: number = 1;
+  beforeAmend:string = 'true'
+  beforeAmend2:string = 'true'
 
 
 }
