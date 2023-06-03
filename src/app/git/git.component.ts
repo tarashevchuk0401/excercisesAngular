@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./git.component.scss']
 })
 export class GitComponent {
-  res : number = 0;
+
+  beforeAmend:string = 'false'
+  beforeAmend2:string = 'false';
+
+  cherryPick: string = '8:56';
+
 
 }
