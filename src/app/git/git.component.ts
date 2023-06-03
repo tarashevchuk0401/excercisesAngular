@@ -7,8 +7,10 @@ import { Component } from '@angular/core';
 })
 export class GitComponent {
 
-  beforeAmend:string = 'true'
-  beforeAmend2:string = 'true'
+  beforeAmend:string = 'false'
+  beforeAmend2:string = 'false';
+
+  cherryPick: string = '8:56';
 
 
 }
