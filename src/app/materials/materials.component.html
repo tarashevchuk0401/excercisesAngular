@@ -1,5 +1,82 @@
 <p>materials works!</p>
 <div>
+  <h2>Dialog</h2>
+  <div>
+    <button mat-raised-button (click)="openDialog('Open dialog')">Dialog</button>
+  </div>
+</div>
+<div>
+  <h2>SNackBar</h2>
+  <button mat-button (click)="openSnack('item deleted', 'X')">Open snackbar</button>
+</div>
+<div>
+  <h2>DatePicker</h2>
+  <div>
+    <mat-form-field >
+      <input  matInput [matDatepicker]="myDate" [min]="minDate" [max]="maxDate" >
+      <mat-datepicker-toggle [for]="myDate" matSuffix></mat-datepicker-toggle>
+      <mat-datepicker #myDate ></mat-datepicker>
+    </mat-form-field>
+  </div>
+</div>
+<div>
+  <h2>Autocompleate</h2>
+  <div>
+    <form action="">
+      <mat-form-field>
+        <input matInput type="text" [matAutocomplete]="auto" [formControl]="myControl" >
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let o of filteredOptions | async" [value]="o.name">
+            {{o.name}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </form>
+  </div>
+</div>
+<div>
+  <h2>Select</h2>
+  <div>
+    <mat-form-field>
+      <mat-label>label</mat-label>
+      <mat-select>
+        <mat-optgroup label="abc">
+          <mat-option value="1">1</mat-option>
+          <mat-option>2</mat-option>
+          <mat-option>3</mat-option>
+        </mat-optgroup>
+        <mat-optgroup label="bla bla bla">
+          <mat-option value="1">d</mat-option>
+          <mat-option>gudbuy</mat-option>
+          <mat-option>df</mat-option>
+        </mat-optgroup>
+
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>
+<div>
+  <h2>Input</h2>
+  <mat-form-field class="form_name" floatLabel="auto" appearance="fill" color="warn">
+    <mat-label class="label_name">
+      <mat-icon>person</mat-icon>
+      Name
+    </mat-label>
+    <input class="input_name" required type="text" matInput>
+    <mat-hint>min 5 </mat-hint>
+  </mat-form-field>
+  <mat-form-field floatLabel="auto" class="form_name" appearance="outline">
+    <mat-label class="label_name">Name</mat-label>
+    <input class="input_name" required type="text" matInput>
+    <mat-hint>min 5 </mat-hint>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Enter Text</mat-label>
+    <mat-icon matTextPrefix="">sentiment_very_satisfied</mat-icon>
+    <textarea matInput></textarea>
+  </mat-form-field>
+</div>
+<div>
   <h2>Stepper</h2>
   <div>
     <mat-horizontal-stepper linear="">
@@ -10,7 +87,7 @@
             <mat-label>Favorite food</mat-label>
             <input [(ngModel)]="inputValue" matInput placeholder="Ex. Pizza">
             {{inputValue}}
-           
+
           </mat-form-field>
         </form>
         <button (click)="showInput()">Show</button>

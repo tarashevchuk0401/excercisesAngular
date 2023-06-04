@@ -14,8 +14,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { GmailComponent } from './gmail/gmail.component';
 import { GitComponent } from './git/git.component';
+import { DialogComponent } from './materials/dialog/dialog.component';
 
 @NgModule({
+  entryComponents: [
+    DialogComponent
+  ],
   declarations: [
     AppComponent,
     GridComponent,
@@ -25,7 +29,8 @@ import { GitComponent } from './git/git.component';
     AddProductComponent,
     MaterialsComponent,
     GmailComponent,
-    GitComponent
+    GitComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
