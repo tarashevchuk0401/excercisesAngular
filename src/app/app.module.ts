@@ -15,10 +15,12 @@ import { MaterialModule } from './material/material.module';
 import { GmailComponent } from './gmail/gmail.component';
 import { GitComponent } from './git/git.component';
 import { DialogComponent } from './materials/dialog/dialog.component';
+import { MatSortModule } from '@angular/material/sort';
+
 
 @NgModule({
   entryComponents: [
-    DialogComponent
+    
   ],
   declarations: [
     AppComponent,
@@ -30,7 +32,7 @@ import { DialogComponent } from './materials/dialog/dialog.component';
     MaterialsComponent,
     GmailComponent,
     GitComponent,
-    DialogComponent
+    DialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,8 @@ import { DialogComponent } from './materials/dialog/dialog.component';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    MatSortModule
     
   ],
   providers: [],

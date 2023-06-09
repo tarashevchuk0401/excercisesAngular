@@ -14,6 +14,16 @@ export class GitComponent {
   cherryPick: string = '8:56';
   resA : number = 0;
   resB: number = 1;
+  text:any;
+  isGreen:boolean = true;
+
+  show(){
+    console.log(this.text)
+  }
+
+  toogle(){
+    this.isGreen =! this.isGreen
+  }
 
 
 }

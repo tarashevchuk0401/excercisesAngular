@@ -24,6 +24,9 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatDialogModule} from '@angular/material/dialog';
+import { MatTableModule} from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 
@@ -35,6 +38,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatInputModule,
   ],
   exports: [
+    MatPaginatorModule,
+    MatSortModule,
+    MatTableModule,
     MatDialogModule,
     MatSnackBarModule,
     MatNativeDateModule,
