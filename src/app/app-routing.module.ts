@@ -11,6 +11,7 @@ import { GmailComponent } from './gmail/gmail.component';
 import { GitComponent } from './git/git.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './parent/child/child.component';
+import { QuestionsComponent } from './questions/questions.component';
 
 const routes: Routes = [
   // {path:"" , component: AppComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path:"git" , component: GitComponent },
   {path:"parent" , component: ParentComponent },
   {path:"child" , component: ChildComponent },
+  {path:"questions" , component: QuestionsComponent },
 ];
 
 @NgModule({

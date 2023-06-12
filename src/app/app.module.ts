@@ -18,6 +18,7 @@ import { DialogComponent } from './materials/dialog/dialog.component';
 import { MatSortModule } from '@angular/material/sort';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './parent/child/child.component';
+import { QuestionsComponent } from './questions/questions.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { ChildComponent } from './parent/child/child.component';
     DialogComponent,
     ParentComponent,
     ChildComponent,
+    QuestionsComponent,
   ],
   imports: [
     BrowserModule,
