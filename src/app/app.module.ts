@@ -16,6 +16,8 @@ import { GmailComponent } from './gmail/gmail.component';
 import { GitComponent } from './git/git.component';
 import { DialogComponent } from './materials/dialog/dialog.component';
 import { MatSortModule } from '@angular/material/sort';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './parent/child/child.component';
 
 
 @NgModule({
@@ -33,6 +35,8 @@ import { MatSortModule } from '@angular/material/sort';
     GmailComponent,
     GitComponent,
     DialogComponent,
+    ParentComponent,
+    ChildComponent,
   ],
   imports: [
     BrowserModule,

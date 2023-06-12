@@ -10,6 +10,7 @@ export class GitComponent {
 
   beforeAmend:string = 'false'
   beforeAmend2:string = 'false';
+  color:string= 'orange'
 
   cherryPick: string = '8:56';
   resA : number = 0;

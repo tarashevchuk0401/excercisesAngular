@@ -12,7 +12,7 @@ import { IProduct } from './Iproduct';
 export class AsyncComponent implements OnInit {
 
   productSubscription?: Subscription
-  async = of(1, 2, 3, 4, true);
+  async = of(1, 2, 3, 4);
   products?: Observable<IProduct[]>;
 
   res = new Promise((resolve, reject) => {

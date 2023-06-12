@@ -9,6 +9,8 @@ import { AsyncComponent } from './async/async.component';
 import { MaterialsComponent } from './materials/materials.component';
 import { GmailComponent } from './gmail/gmail.component';
 import { GitComponent } from './git/git.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './parent/child/child.component';
 
 const routes: Routes = [
   // {path:"" , component: AppComponent },
@@ -19,6 +21,8 @@ const routes: Routes = [
   {path:"materials" , component: MaterialsComponent },
   {path:"gmail" , component: GmailComponent },
   {path:"git" , component: GitComponent },
+  {path:"parent" , component: ParentComponent },
+  {path:"child" , component: ChildComponent },
 ];
 
 @NgModule({
