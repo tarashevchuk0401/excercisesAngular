@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Event } from '@material-ui/icons';
 
 @Component({
@@ -6,21 +6,17 @@ import { Event } from '@material-ui/icons';
   templateUrl: './child.component.html',
   styleUrls: ['./child.component.scss']
 })
-export class ChildComponent implements OnInit{
+export class ChildComponent {
 
-  @Input() fromC: string = ''
-  @Output() newOut = new EventEmitter()
+  output: string = 'out1';
 
-  outText: string = 'OUT_FROM_CHILD'
+ @Input() toC = '';
+ @Input() test3C = '';
 
-  @Output() out = new EventEmitter<string>();
+ @Output() out1 = new EventEmitter<string>();
 
-ngOnInit(): void {
-  this.showText(this.outText)
-}
-
-  showText(outText: string) {
-    this.newOut.emit(outText)
-  }
+ showText(){
+  this.out1.emit(this.output)
+ }
 
 }

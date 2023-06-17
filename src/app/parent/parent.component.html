@@ -1,6 +1,10 @@
+<p>parent works!</p>
+<input type="text"  [(ngModel)]="inputValue">
+<br>
+<div>{{inputValue}}</div>
+<hr>
+<hr>
+<button mat-raised-button routerLink="child">Child</button>
+<div>Output : {{output}}</div>
 
-<button mat-flat-button >SHOW</button>
-<div>RES:  {{res}}</div>
-<app-child [fromC]="fromP" (newOut)="parentFn($event)" >
-
-</app-child>
+<app-child [toC]="inputValue" [test3C]="test3P" (out1)="parentFn($event)" ></app-child>
