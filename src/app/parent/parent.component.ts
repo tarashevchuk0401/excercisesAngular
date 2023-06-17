@@ -7,12 +7,10 @@ import { Component } from '@angular/core';
 })
 export class ParentComponent {
 
-  fromP:string = 'fromP'
-  inputValue: string = 'init'
-  test3P:string = 'test3';
-  output: string = ''
+fromP: string = 'fromP';
+res: string = '';
 
-  parentFn(text: string){
-   this.output = text
+  parentFn(text:string){
+    this.res = text;
   }
 }

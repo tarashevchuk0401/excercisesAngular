@@ -13,11 +13,13 @@ enum MyEnum {
 })
 export class QuestionsComponent implements OnInit {
   
-  
+  a:string = ''
 
   ngOnInit(): void {
     console.log(MyEnum.P)  
   }
+
+  
 
 
 
