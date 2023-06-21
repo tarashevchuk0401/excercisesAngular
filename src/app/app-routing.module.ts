@@ -12,6 +12,7 @@ import { GitComponent } from './git/git.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './parent/child/child.component';
 import { QuestionsComponent } from './questions/questions.component';
+import { AnimationComponent } from './animation/animation.component';
 
 const routes: Routes = [
   // {path:"" , component: AppComponent },
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path:"parent" , component: ParentComponent },
   {path:"child" , component: ChildComponent },
   {path:"questions" , component: QuestionsComponent },
+  {path:"animation" , component: AnimationComponent },
 ];
 
 @NgModule({

@@ -19,6 +19,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './parent/child/child.component';
 import { QuestionsComponent } from './questions/questions.component';
+import { AnimationComponent } from './animation/animation.component';
 
 
 @NgModule({
@@ -39,8 +40,10 @@ import { QuestionsComponent } from './questions/questions.component';
     ParentComponent,
     ChildComponent,
     QuestionsComponent,
+    AnimationComponent,
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,

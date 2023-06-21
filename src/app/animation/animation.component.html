@@ -1,0 +1,23 @@
+<p>animation works!</p>
+
+<!-- <div class="test" [@myAnimation]="stateMyAnimation" *ngIf="stateMyAnimation" (click)="show()">MY ANIMATION</div> -->
+<div class="myDiv" [@alfa]="stateMyAnimation" *ngIf="stateMyAnimation" (click)="show()">
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, voluptatem.</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, voluptatem.</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, voluptatem.</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, voluptatem.</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, voluptatem.</div>
+</div>
+<div class="myDiv" [@beta]="stateMyAnimation" *ngIf="stateMyAnimation" (click)="show()">
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, voluptatem.</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, voluptatem.</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, voluptatem.</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, voluptatem.</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, voluptatem.</div>
+</div>
+<br>
+<div>
+    <label for=""> stateMyAnimation</label>
+    <button mat-raised-button primary (click)="toFirst()">first</button>
+    <button mat-raised-button color="primary" (click)="toSecond()">second</button>
+</div>

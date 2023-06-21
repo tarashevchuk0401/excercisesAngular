@@ -1,30 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, DoCheck, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-git',
   templateUrl: './git.component.html',
   styleUrls: ['./git.component.scss']
 })
-export class GitComponent {
+export class GitComponent implements OnChanges, DoCheck{
 
+  chanelName: string = 'webTech';
+  res: string = '_'
 
-  beforeAmend:string = 'false'
-  beforeAmend2:string = 'false';
-  color:string= 'orange'
+  ngOnChanges(changes: SimpleChanges): void{
+    console.log('onchanges')
+  }
 
-  cherryPick: string = '8:56';
-  resA : number = 0;
-  resB: number = 1;
-  text:any;
-  isGreen:boolean = true;
+  ngDoCheck(): void {
+    console.log('doCheck')
+  }
 
   show(){
-    console.log(this.text)
+    this.res = 'result';
   }
-
-  toogle(){
-    this.isGreen =! this.isGreen
-  }
-
 
 }
