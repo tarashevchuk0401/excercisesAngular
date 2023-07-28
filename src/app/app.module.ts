@@ -20,7 +20,15 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './parent/child/child.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { AnimationComponent } from './animation/animation.component';
+import { RouteComponent } from './route/route.component';
+import { AuthComponent } from './auth/auth.component';
+import { ServerService } from './services/server.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { NavigationComponent } from './navigation/navigation.component';
+import { FirebaseComponent } from './firebase/firebase.component';
 
+import { DateComponent } from './date/date.component';
+import { ColoredDirective } from './directives/colored.directive';
 
 @NgModule({
   entryComponents: [
@@ -41,6 +49,13 @@ import { AnimationComponent } from './animation/animation.component';
     ChildComponent,
     QuestionsComponent,
     AnimationComponent,
+    RouteComponent,
+    AuthComponent,
+    NavigationComponent,
+    FirebaseComponent,
+    DateComponent,
+    ColoredDirective,
+    
   ],
   imports: [
     BrowserAnimationsModule,
@@ -50,10 +65,16 @@ import { AnimationComponent } from './animation/animation.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MaterialModule,
-    MatSortModule
-    
+    MatSortModule,
+    HttpClientModule,
+  
   ],
-  providers: [],
+  providers: [ServerService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+  constructor(){
+    console.log('APP.Mod')
+  }
+}

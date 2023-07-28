@@ -1,0 +1,27 @@
+<main>
+    <form (ngSubmit)="onFormSubmit(authForm)" #authForm="ngForm">
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input type="email" matInput ngModel name="email" required email #email="ngModel">
+            
+        </mat-form-field>
+        <div *ngIf="authForm.touched && email.invalid">
+            <div> Entaer email</div>
+        </div>
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input type="text" matInput ngModel name="password" required #password="ngModel">
+        </mat-form-field>
+        <div *ngIf="authForm.touched && password.invalid">
+            <div> Entaer password</div>
+        </div>
+        <button [disabled]="authForm.invalid" type="submit" mat-button >{{isLoginMode ? 'Login' : 'SignUp'}}</button>
+        <button mat-button (click)="onSwitchMode()">{{isLoginMode ? 'Go to Sign Up' : 'Go to Log In'}}</button>
+        <hr>
+        <hr>
+        <button mat-button (click)="testPost()">POST</button>
+        <button mat-button (click)="testGet()">GET</button>
+        <div>{{errorText}}</div>
+    </form>
+    <div>RESULT : {{result}}</div>
+</main>
