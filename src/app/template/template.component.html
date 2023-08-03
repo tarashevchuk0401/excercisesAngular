@@ -1,0 +1,13 @@
+<p>template works!</p>
+<button (click)="toogle()">toogle</button>
+<!-- <div *ngIf="isVisible">
+    SOME TEXT DIV
+</div> -->
+
+ <ng-template [ngIf]="!isVisible" #template>
+
+    NG_TEMPLATE
+</ng-template> 
+
+<ng-content *ngIf="isVisible; else template"></ng-content>
+

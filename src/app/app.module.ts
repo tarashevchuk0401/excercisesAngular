@@ -29,6 +29,8 @@ import { FirebaseComponent } from './firebase/firebase.component';
 
 import { DateComponent } from './date/date.component';
 import { ColoredDirective } from './directives/colored.directive';
+import { StandaloneComponent } from './standalone/standalone.component';
+import { TemplateComponent } from './template/template.component';
 
 @NgModule({
   entryComponents: [
@@ -55,7 +57,7 @@ import { ColoredDirective } from './directives/colored.directive';
     FirebaseComponent,
     DateComponent,
     ColoredDirective,
-    
+    TemplateComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -67,7 +69,8 @@ import { ColoredDirective } from './directives/colored.directive';
     MaterialModule,
     MatSortModule,
     HttpClientModule,
-  
+    StandaloneComponent,
+
   ],
   providers: [ServerService],
   bootstrap: [AppComponent]

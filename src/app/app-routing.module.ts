@@ -18,10 +18,12 @@ import { AuthComponent } from './auth/auth.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { DateComponent } from './date/date.component';
 import { AccountModule } from './lazy/account/account.module';
+import { TemplateComponent } from './template/template.component';
 
 const routes: Routes = [
   // {path:"" , component: AppComponent },
   {path:"grid" , component: GridComponent },
+  {path:"template" , component: TemplateComponent },
   {path:"position" , component: PositionComponent },
   {path:"debug" , component: DebugComponent },
   {path:"async" , component: AsyncComponent },
