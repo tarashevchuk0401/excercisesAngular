@@ -87,7 +87,7 @@ import { debounceTime } from 'rxjs';
 
         }),
       ),
-      transition('void => first', animate('0ms linear')),
+      transition('void => first', animate('20ms linear')),
       transition('first => second', animate('2200ms ease-in')),
       transition('second => first', animate('2200ms ease-out')),
     ]),
@@ -105,6 +105,10 @@ export class AnimationComponent implements OnInit {
       this.stateMyAnimation = 'second'
     }, 10)
   }
+
+
+
+  
 
   removeItem() {
     this.stateOfElement = 'disabled'
