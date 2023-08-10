@@ -61,7 +61,7 @@ import { TemplateComponent } from './template/template.component';
   ],
   imports: [
     BrowserAnimationsModule,
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,

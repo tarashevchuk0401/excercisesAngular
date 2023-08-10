@@ -38,5 +38,9 @@ export class AsyncserviceService {
     this.Products.push(p);
     this.Products$.next(this.Products);
    }
+   AddProduataskaskas (p: IProduct): void{
+    this.Products.push(p);
+    this.Products$.next(this.Products);
+   }
 
 }
