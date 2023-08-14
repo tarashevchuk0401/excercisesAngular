@@ -10,7 +10,8 @@ import { User } from '../auth/user.model';
 export class ServerService {
 
   isLoggedIn: boolean = false;
-  userSubject  = new Subject<User>()
+  userSubject  = new Subject<User>();
+  gitTest: string = '4'
 
   urlSignup: string = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCnBZj7TzcO_CIkRfe5_bx-933WFe2vlwU'
   urlLoggin: string = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCnBZj7TzcO_CIkRfe5_bx-933WFe2vlwU'
