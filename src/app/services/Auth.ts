@@ -5,4 +5,5 @@ export interface AuthResponseData {
     expiresIn: string,
     localId: string,
     registered?: boolean,
+    testGit?: string,
 }
