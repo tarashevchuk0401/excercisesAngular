@@ -31,6 +31,7 @@ import { DateComponent } from './date/date.component';
 import { ColoredDirective } from './directives/colored.directive';
 import { StandaloneComponent } from './standalone/standalone.component';
 import { TemplateComponent } from './template/template.component';
+import { NewsComponent } from './news/news.component';
 
 @NgModule({
   entryComponents: [
@@ -58,6 +59,7 @@ import { TemplateComponent } from './template/template.component';
     DateComponent,
     ColoredDirective,
     TemplateComponent,
+    NewsComponent
   ],
   imports: [
     BrowserAnimationsModule,

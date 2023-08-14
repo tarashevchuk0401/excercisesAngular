@@ -19,6 +19,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { DateComponent } from './date/date.component';
 import { AccountModule } from './lazy/account/account.module';
 import { TemplateComponent } from './template/template.component';
+import { NewsComponent } from './news/news.component';
 
 const routes: Routes = [
   // {path:"" , component: AppComponent },
@@ -39,6 +40,7 @@ const routes: Routes = [
   {path:"auth" , component: AuthComponent },
   {path:"navigation" , component: NavigationComponent },
   {path:"date" , component: DateComponent },
+  {path:"news" , component: NewsComponent },
   {
     path:"pages",
     loadChildren: () => import('./lazy/account/account.module').then((m) => m.AccountModule) 
