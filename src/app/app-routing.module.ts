@@ -20,6 +20,7 @@ import { DateComponent } from './date/date.component';
 import { AccountModule } from './lazy/account/account.module';
 import { TemplateComponent } from './template/template.component';
 import { NewsComponent } from './news/news.component';
+import { PipescompComponent } from './pipescomp/pipescomp.component';
 
 const routes: Routes = [
   // {path:"" , component: AppComponent },
@@ -41,6 +42,7 @@ const routes: Routes = [
   {path:"navigation" , component: NavigationComponent },
   {path:"date" , component: DateComponent },
   {path:"news" , component: NewsComponent },
+  {path:"pipes" , component: PipescompComponent },
   {
     path:"pages",
     loadChildren: () => import('./lazy/account/account.module').then((m) => m.AccountModule) 

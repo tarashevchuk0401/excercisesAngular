@@ -6,7 +6,10 @@ import { Injectable } from '@angular/core';
 })
 export class NewsserverService {
 
-  info :string = '17:07';
+  info :string = '17:07:00';
+  info2 :string = '17:08';
+  info3 :string = '17:09,,';
+  info4 :string = '17:09,,';
   
   constructor( private http : HttpClient) { }
 

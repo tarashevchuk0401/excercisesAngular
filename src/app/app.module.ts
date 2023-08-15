@@ -32,12 +32,15 @@ import { ColoredDirective } from './directives/colored.directive';
 import { StandaloneComponent } from './standalone/standalone.component';
 import { TemplateComponent } from './template/template.component';
 import { NewsComponent } from './news/news.component';
+import { PipescompComponent } from './pipescomp/pipescomp.component';
+import { RegexPipe } from './pipescomp/regex.pipe';
 
 @NgModule({
   entryComponents: [
     
   ],
   declarations: [
+    PipescompComponent,
     AppComponent,
     GridComponent,
     PositionComponent,
@@ -59,7 +62,8 @@ import { NewsComponent } from './news/news.component';
     DateComponent,
     ColoredDirective,
     TemplateComponent,
-    NewsComponent
+    NewsComponent,
+    RegexPipe
   ],
   imports: [
     BrowserAnimationsModule,
