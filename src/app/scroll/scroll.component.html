@@ -1,0 +1,45 @@
+<div class="wrapper" #wrapper>
+    <header>
+        <img class="header_photo" src="assets/img/mountain.jpg" alt="">
+        <!-- toogle fixed -->
+        <nav [class.nav-fixed]="scrollYPosition > 100">
+            <img class="header_logo" src="assets/img/logo.svg" alt="logo">
+            <div class="nav_container">
+                <button class="nav-btn" href="" (click)="navigateTo(sectionHome)">Home</button>
+                <button class="nav-btn" href="" (click)="navigateTo(sectionAbout)" >About</button>
+                <button class="nav-btn" href="" (click)="navigateTo(sectionServices)" >Service</button>
+                <button class="nav-btn" href="" (click)="navigateTo(sectionTours)" >Tour</button>
+            </div>
+        </nav>
+        <div class="banner">
+            <h1>SCROLL PROJECT</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore assumenda unde minima vero a eveniet
+                architecto numquam nostrum eos ipsam.</p>
+            <button class="bunner_btn">EXPLORE TOURS</button>
+        </div>
+    </header>
+    <main>
+        <section class="card" #sectionHome>
+            <h3 >Home</h3>
+            <p>{{lorem}}</p>
+        </section>
+        <section class="card" #sectionAbout>
+            <h3 id="about">About</h3>
+            <p>{{lorem}}</p>
+        </section>
+        <section class="card" #sectionServices>
+            <h3 id="services">Services</h3>
+            <p>{{lorem}}</p>
+        </section>
+        <section class="card" #sectionTours>
+            <h3 id="tours">Tours</h3>
+            <p>{{lorem}}</p>
+        </section>
+    </main>
+    <footer></footer>
+    <div class="up" *ngIf="scrollYPosition > 500" (click)="navigateTo(wrapper)">
+        <span>
+            <img class="icon_up" src="assets/img/up.svg" alt="">
+        </span>
+    </div>
+</div>

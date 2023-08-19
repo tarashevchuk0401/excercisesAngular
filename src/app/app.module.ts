@@ -34,6 +34,7 @@ import { TemplateComponent } from './template/template.component';
 import { NewsComponent } from './news/news.component';
 import { PipescompComponent } from './pipescomp/pipescomp.component';
 import { RegexPipe } from './pipescomp/regex.pipe';
+import { ScrollComponent } from './scroll/scroll.component';
 
 @NgModule({
   entryComponents: [
@@ -63,7 +64,8 @@ import { RegexPipe } from './pipescomp/regex.pipe';
     ColoredDirective,
     TemplateComponent,
     NewsComponent,
-    RegexPipe
+    RegexPipe,
+    ScrollComponent
   ],
   imports: [
     BrowserAnimationsModule,

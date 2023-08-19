@@ -21,11 +21,13 @@ import { AccountModule } from './lazy/account/account.module';
 import { TemplateComponent } from './template/template.component';
 import { NewsComponent } from './news/news.component';
 import { PipescompComponent } from './pipescomp/pipescomp.component';
+import { ScrollComponent } from './scroll/scroll.component';
 
 const routes: Routes = [
-  // {path:"" , component: AppComponent },
+  {path:"" , component: ScrollComponent },
   {path:"grid" , component: GridComponent },
   {path:"template" , component: TemplateComponent },
+  {path:"scroll" , component: ScrollComponent },
   {path:"position" , component: PositionComponent },
   {path:"debug" , component: DebugComponent },
   {path:"async" , component: AsyncComponent },

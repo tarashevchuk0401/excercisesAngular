@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-debug',
@@ -7,23 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DebugComponent  implements OnInit{
 
-  text: string = 'init';
-  second: string = '____'
+
+  @ViewChild('div1') div1!: ElementRef;
+  @ViewChild('div2') div2!: ElementRef;
+  @ViewChild('div3') div3!: ElementRef;
+
+  constructor(private renderer: Renderer2) {}
+
 
   ngOnInit(): void {
+    
   }
 
-  secondFn(){
-   this.second = 'second done!';
-  }
 
-  change(){
-    this.text = 'canged';
-    this.text = '1';
-    this.text = '2';
-    this.secondFn();
-    this.text = '2';
-    this.text = '2';
+  changeColor(divRefName: string, color: string) {
+    
   }
-
 }
