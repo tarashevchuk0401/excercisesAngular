@@ -8,21 +8,25 @@ import { Component } from '@angular/core';
 export class TemplateComponent {
 
   isVisible: boolean = false;
-  result: number | undefined ;
+  result: number | undefined;
 
-  toogle(){
+  toogle() {
     this.isVisible = !this.isVisible
   }
 
-  fibb(){
-    //1,1,2,3,5,8
-    // let last = 1;
-    // let res = 0
-    // // for(let i = 0; i < 3; i + last){
-    // //   last = i;
-    // //   res += i
-    // // }
-    // this.result = res
+  fibb() {
+    //1,1,2,3,5,8, 13
+    let n = 50
+    let start = [1, 1];
+
+    for (let i = 0; i < n - 2; i++) {
+      start.push(start[start.length - 1] + start[start.length - 2])
+    }
+
+    console.log(start[start.length - 1])
+
+
   }
+
 
 }
