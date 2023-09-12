@@ -16,13 +16,12 @@ export class ScrollComponent implements OnInit {
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: Event): any {
-    this.scrollYPosition = window.scrollY;
-
-  }
+    this.scrollYPosition = window.scrollY ;
+}
 
   constructor(private renderer: Renderer2) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {  
 
   }
 

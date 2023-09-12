@@ -35,6 +35,11 @@ import { NewsComponent } from './news/news.component';
 import { PipescompComponent } from './pipescomp/pipescomp.component';
 import { RegexPipe } from './pipescomp/regex.pipe';
 import { ScrollComponent } from './scroll/scroll.component';
+import { UploadFotoComponent } from './upload-foto/upload-foto.component';
+import{AngularFireModule} from '@angular/fire/compat';
+import {AngularFireStorageModule} from '@angular/fire/compat/storage'
+import { environment } from './environment.ts/environment';
+
 
 @NgModule({
   entryComponents: [
@@ -65,7 +70,8 @@ import { ScrollComponent } from './scroll/scroll.component';
     TemplateComponent,
     NewsComponent,
     RegexPipe,
-    ScrollComponent
+    ScrollComponent,
+    UploadFotoComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -78,7 +84,8 @@ import { ScrollComponent } from './scroll/scroll.component';
     MatSortModule,
     HttpClientModule,
     StandaloneComponent,
-
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireModule
   ],
   providers: [ServerService],
   bootstrap: [AppComponent]

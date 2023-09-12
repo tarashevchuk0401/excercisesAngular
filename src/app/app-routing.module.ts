@@ -22,10 +22,12 @@ import { TemplateComponent } from './template/template.component';
 import { NewsComponent } from './news/news.component';
 import { PipescompComponent } from './pipescomp/pipescomp.component';
 import { ScrollComponent } from './scroll/scroll.component';
+import { UploadFotoComponent } from './upload-foto/upload-foto.component';
 
 const routes: Routes = [
   {path:"" , component: ScrollComponent },
   {path:"grid" , component: GridComponent },
+  {path:"uploadFoto" , component: UploadFotoComponent },
   {path:"template" , component: TemplateComponent },
   {path:"scroll" , component: ScrollComponent },
   {path:"position" , component: PositionComponent },
