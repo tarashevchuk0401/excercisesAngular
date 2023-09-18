@@ -22,13 +22,13 @@ export class ServerService {
 
   signUp(email: string, password: string) {
     return this.http.post<AuthResponseData>(this.urlSignup, { email, password, returnSecureToken: true })
-      .pipe(catchError(this.getErrorHandler), tap(this.handleUser.bind(this)));
+      .pipe(tap(i => console.log(i)), catchError(this.getErrorHandler), tap(this.handleUser.bind(this)));
 
   }
 
   loggin(email: string, password: string) {
     return this.http.post<AuthResponseData>(this.urlLoggin, { email, password, returnSecureToken: true })
-      .pipe(catchError(this.getErrorHandler), tap(this.handleUser.bind(this)))
+      .pipe(tap(i => console.log(i)), catchError(this.getErrorHandler), tap(this.handleUser.bind(this)))
   }
 
   private handleUser(response: AuthResponseData) {

@@ -46,10 +46,9 @@ export class AuthComponent {
     }
 
     authObservable.subscribe(d => {
-      console.log(d);
+      // console.log(d);
       this.errorText = '';
       // this.roter.navigate(['navigation']);
-
       sessionStorage.setItem("id" , authForm.value.email )
     },
       errorRes => {
@@ -59,11 +58,8 @@ export class AuthComponent {
         // }
         console.log(errorRes);
         this.errorText = errorRes;
-
       }
     )
-
-    console.log(authForm.value)
   }
 
   onSwitchMode() {
@@ -76,7 +72,6 @@ export class AuthComponent {
 
   testGet(){
     this.server.testGet().pipe(
-      // map(item => Object.values(item)),
       map(item => Object.values(item),
       map((i: any) => i.test) 
       )).subscribe( d => {
