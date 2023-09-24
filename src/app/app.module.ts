@@ -39,6 +39,8 @@ import { UploadFotoComponent } from './upload-foto/upload-foto.component';
 import{AngularFireModule} from '@angular/fire/compat';
 import {AngularFireStorageModule} from '@angular/fire/compat/storage'
 import { environment } from './environment.ts/environment';
+import { MaterialsTableComponent } from './materials-table/materials-table.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 @NgModule({
@@ -71,7 +73,8 @@ import { environment } from './environment.ts/environment';
     NewsComponent,
     RegexPipe,
     ScrollComponent,
-    UploadFotoComponent
+    UploadFotoComponent,
+    MaterialsTableComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -85,7 +88,8 @@ import { environment } from './environment.ts/environment';
     HttpClientModule,
     StandaloneComponent,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireModule
+    AngularFireModule,
+    MatPaginatorModule
   ],
   providers: [ServerService],
   bootstrap: [AppComponent]

@@ -47,7 +47,7 @@ export class AuthComponent {
 
     authObservable.subscribe(d => {
       // console.log(d);
-      this.errorText = '';
+      this.errorText = ''
       // this.roter.navigate(['navigation']);
       sessionStorage.setItem("id" , authForm.value.email )
     },
