@@ -41,6 +41,7 @@ import {AngularFireStorageModule} from '@angular/fire/compat/storage'
 import { environment } from './environment.ts/environment';
 import { MaterialsTableComponent } from './materials-table/materials-table.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 
 @NgModule({
@@ -74,7 +75,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     RegexPipe,
     ScrollComponent,
     UploadFotoComponent,
-    MaterialsTableComponent
+    MaterialsTableComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserAnimationsModule,

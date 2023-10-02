@@ -24,9 +24,11 @@ import { PipescompComponent } from './pipescomp/pipescomp.component';
 import { ScrollComponent } from './scroll/scroll.component';
 import { UploadFotoComponent } from './upload-foto/upload-foto.component';
 import { MaterialsTableComponent } from './materials-table/materials-table.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 const routes: Routes = [
   {path:"" , component: ScrollComponent },
+  {path:"reactive-form" , component: ReactiveFormComponent },
   {path:"table-materials" , component: MaterialsTableComponent },
   {path:"grid" , component: GridComponent },
   {path:"uploadFoto" , component: UploadFotoComponent },
