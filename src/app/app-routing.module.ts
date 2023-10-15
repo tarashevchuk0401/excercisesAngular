@@ -25,9 +25,13 @@ import { ScrollComponent } from './scroll/scroll.component';
 import { UploadFotoComponent } from './upload-foto/upload-foto.component';
 import { MaterialsTableComponent } from './materials-table/materials-table.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { JestComponent } from './jest/jest.component';
+import { IbanComponent } from './iban/iban.component';
 
 const routes: Routes = [
   {path:"" , component: ScrollComponent },
+  {path:"jest" , component: JestComponent },
+  {path:"iban" , component: IbanComponent},
   {path:"reactive-form" , component: ReactiveFormComponent },
   {path:"table-materials" , component: MaterialsTableComponent },
   {path:"grid" , component: GridComponent },

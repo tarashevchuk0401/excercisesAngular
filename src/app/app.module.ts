@@ -42,6 +42,8 @@ import { environment } from './environment.ts/environment';
 import { MaterialsTableComponent } from './materials-table/materials-table.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { JestComponent } from './jest/jest.component';
+import { AngularIbanModule } from 'angular-iban';
 
 
 @NgModule({
@@ -49,6 +51,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     
   ],
   declarations: [
+    JestComponent,
     PipescompComponent,
     AppComponent,
     GridComponent,
