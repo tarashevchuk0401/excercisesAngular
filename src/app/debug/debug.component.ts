@@ -21,6 +21,11 @@ test1(){
   this.renderer.setStyle(this.div.nativeElement, 'color', 'red')
   this.renderer.createText
 }
+tesst1(){
+  // this.div.nativeElement.style.color='red'
+  this.renderer.setStyle(this.div.nativeElement, 'color', 'red')
+  this.renderer.createText
+}
 
   
 }
