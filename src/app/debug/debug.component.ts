@@ -16,7 +16,17 @@ export class DebugComponent  implements OnInit{
   }
 
 
-test1(){
+test1sd(){
+  // this.div.nativeElement.style.color='red'
+  this.renderer.setStyle(this.div.nativeElement, 'color', 'red')
+  this.renderer.createText
+}
+testd1(){
+  // this.div.nativeElement.style.color='red'
+  this.renderer.setStyle(this.div.nativeElement, 'color', 'red')
+  this.renderer.createText
+}
+test1s(){
   // this.div.nativeElement.style.color='red'
   this.renderer.setStyle(this.div.nativeElement, 'color', 'red')
   this.renderer.createText
