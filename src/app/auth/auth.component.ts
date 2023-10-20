@@ -81,4 +81,8 @@ export class AuthComponent {
     })
   }
 
+  test(){
+    console.log(test)
+  }
+
 }
