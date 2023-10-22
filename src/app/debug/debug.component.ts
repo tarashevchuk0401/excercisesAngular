@@ -5,27 +5,44 @@ import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/co
   templateUrl: './debug.component.html',
   styleUrls: ['./debug.component.scss']
 })
-export class DebugComponent  implements OnInit{
+export class DebugComponent implements OnInit {
 
-  @ViewChild('div') div!: ElementRef;
 
-  constructor(private renderer: Renderer2){}
+  constructor(private renderer: Renderer2) { }
 
   ngOnInit(): void {
-  
+    this.dateFn()
+  }
+
+  dateFn() {
+    let startDate: Date = new Date();
+    let currentDate: Date = new Date (startDate)
+    let endDate = new Date('November 12, 2026');
+    let valueOfFrequency = 1;
+    let arr: any = [
+      new Date()
+    ];
+
+    let handler = () => {
+      if (currentDate < endDate) {
+      let  newCurrentDate = new Date(currentDate.setMonth(currentDate.getMonth() + 4 * valueOfFrequency));
+
+        if (newCurrentDate < endDate) {
+          arr.push((newCurrentDate));
+        }
+        handler()
+      } else return
+    }
+
+    handler()
+    console.log(arr);
+    // console.log(new Date().toLocaleTimeString('en-US'))
+
   }
 
 
-test1(){
-  // this.div.nativeElement.style.color='red'
-  this.renderer.setStyle(this.div.nativeElement, 'color', 'red')
-  this.renderer.createText
-}
-tesst1(){
-  // this.div.nativeElement.style.color='red'
-  this.renderer.setStyle(this.div.nativeElement, 'color', 'red')
-  this.renderer.createText
-}
 
-  
+
+
+
 }

@@ -82,7 +82,7 @@ export class AuthComponent {
   }
 
   test(){
-    console.log(test)
+    console.log()
   }
 
 }
