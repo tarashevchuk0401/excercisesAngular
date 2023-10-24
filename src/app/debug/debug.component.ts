@@ -17,7 +17,7 @@ export class DebugComponent implements OnInit {
   dateFn() {
     let startDate: Date = new Date();
     let currentDate: Date = new Date (startDate)
-    let endDate = new Date('November 12, 2026');
+    let endDate = new Date('November 12, 2026')
     let valueOfFrequency = 1;
     let arr: any = [
       new Date()
