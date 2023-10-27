@@ -1,4 +1,5 @@
-import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from 'express';
 
 @Component({
   selector: 'app-debug',
@@ -6,15 +7,21 @@ import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/co
   styleUrls: ['./debug.component.scss']
 })
 export class DebugComponent implements OnInit {
+  // @ViewChild('elemet') element!: ElementRef;
 
 
-  constructor(private renderer: Renderer2) { }
+  // constructor( private router : Router) { }
 
   ngOnInit(): void {
-    // this.dateFn()
+    // this.renderer.setStyle(this.element.nativeElement, 'color', 'blue');
+    // console.log(this.element)
   }
 
-
+test(){
+  // window.scrollTo(100,100)
+  // let elem = 
+  // this.router.navigate([], { fragment: "<yourTarget>" });
+}
     
   }
 
@@ -23,4 +30,3 @@ export class DebugComponent implements OnInit {
 
 
 
-}
