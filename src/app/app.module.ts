@@ -8,7 +8,7 @@ import { PositionComponent } from './position/position.component';
 import { DebugComponent } from './debug/debug.component';
 import { AsyncComponent } from './async/async.component';
 import { AddProductComponent } from './async/add-product/add-product.component';
-import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialsComponent } from './materials/materials.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
@@ -41,6 +41,7 @@ import {AngularFireStorageModule} from '@angular/fire/compat/storage'
 import { environment } from './environment.ts/environment';
 import { MaterialsTableComponent } from './materials-table/materials-table.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { ValidatorComponent } from './validator/validator.component';
 
 
 @NgModule({
@@ -74,7 +75,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     RegexPipe,
     ScrollComponent,
     UploadFotoComponent,
-    MaterialsTableComponent
+    MaterialsTableComponent,
+    ValidatorComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -83,6 +85,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    FormsModule,
     MaterialModule,
     MatSortModule,
     HttpClientModule,

@@ -1,0 +1,10 @@
+<form [formGroup]="form">
+    <div></div>
+    <div></div>
+    <label for="name">Name: </label>
+    <div></div>
+    <input   (blur)="onBlur($event)" id="name" type="number" formControlName="amount">
+    <div></div>
+    <button [disabled]="form.invalid" >SUBMIT</button>
+  </form>
+  <input type="number"  #input/>
