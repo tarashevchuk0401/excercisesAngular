@@ -42,6 +42,7 @@ import { environment } from './environment.ts/environment';
 import { MaterialsTableComponent } from './materials-table/materials-table.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { ValidatorComponent } from './validator/validator.component';
+import { LastDayComponent } from './last-day/last-day.component';
 
 
 @NgModule({
@@ -76,7 +77,8 @@ import { ValidatorComponent } from './validator/validator.component';
     ScrollComponent,
     UploadFotoComponent,
     MaterialsTableComponent,
-    ValidatorComponent
+    ValidatorComponent,
+    LastDayComponent,
   ],
   imports: [
     BrowserAnimationsModule,

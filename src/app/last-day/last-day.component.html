@@ -1,0 +1,17 @@
+<table >
+  <tr>
+    <th>Title</th>
+    <th>Amount</th>
+  </tr>
+  <tbody *ngFor="let element of array">
+    <tr class="row">
+      <td>{{element.title}}</td>
+      <td>{{element.amount}}</td>
+    </tr>
+  </tbody>
+  <mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page">
+</mat-paginator>
+</table>
