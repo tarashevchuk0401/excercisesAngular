@@ -36,13 +36,14 @@ import { PipescompComponent } from './pipescomp/pipescomp.component';
 import { RegexPipe } from './pipescomp/regex.pipe';
 import { ScrollComponent } from './scroll/scroll.component';
 import { UploadFotoComponent } from './upload-foto/upload-foto.component';
-import{AngularFireModule} from '@angular/fire/compat';
-import {AngularFireStorageModule} from '@angular/fire/compat/storage'
+import { AngularFireModule} from '@angular/fire/compat';
 import { environment } from './environment.ts/environment';
 import { MaterialsTableComponent } from './materials-table/materials-table.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { ValidatorComponent } from './validator/validator.component';
 import { LastDayComponent } from './last-day/last-day.component';
+import { IndexedDBComponent } from './indexed-db/indexed-db.component';
+import { IndexeddbService } from './services/indexeddb.service';
 
 
 @NgModule({
@@ -79,6 +80,7 @@ import { LastDayComponent } from './last-day/last-day.component';
     MaterialsTableComponent,
     ValidatorComponent,
     LastDayComponent,
+    IndexedDBComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -96,7 +98,7 @@ import { LastDayComponent } from './last-day/last-day.component';
     AngularFireModule,
     MatPaginatorModule
   ],
-  providers: [ServerService],
+  providers: [ServerService, IndexeddbService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 

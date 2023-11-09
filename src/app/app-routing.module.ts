@@ -26,9 +26,11 @@ import { UploadFotoComponent } from './upload-foto/upload-foto.component';
 import { MaterialsTableComponent } from './materials-table/materials-table.component';
 import { ValidatorComponent } from './validator/validator.component';
 import { LastDayComponent } from './last-day/last-day.component';
+import { IndexedDBComponent } from './indexed-db/indexed-db.component';
 
 const routes: Routes = [
   {path:"" , component: ScrollComponent },
+  {path:"indexed" , component: IndexedDBComponent },
   {path:"last-day" , component: LastDayComponent },
   {path:"validator" , component: ValidatorComponent },
   {path:"table-materials" , component: MaterialsTableComponent },
