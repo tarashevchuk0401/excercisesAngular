@@ -1,6 +1,11 @@
 <div>
-    <div>IBAN: {{account.IBAN}}</div>
-    <div>balance{{account.ballance}}</div>
-    <button (click)="exportData()">Export to JSON</button>
+    <!-- <div>IBAN: {{account.IBAN}}</div> -->
+    <!-- <div>balance{{account.ballance}}</div> -->
+    <button (click)="exportData()">Export</button>
+    <hr>
+    <input type="file" (change)="onFileSelected($event)" accept=".xlsx, .json" />
+
 
 </div>
+
+<pre>{{res}}</pre>

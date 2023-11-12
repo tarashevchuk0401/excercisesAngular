@@ -1,4 +1,6 @@
+// download.component.ts
 import { Component } from '@angular/core';
+import * as XLSX from 'xlsx';
 
 @Component({
   selector: 'app-download',
@@ -6,31 +8,36 @@ import { Component } from '@angular/core';
   styleUrls: ['./download.component.scss']
 })
 export class DownloadComponent {
+  selectedFile: File | null = null;
+  res:any;
 
-  account = {
-    IBAN: 'UA56464654',
-    ballance: 545
+  onFileSelected(event: any): void {
+    this.selectedFile = event.target.files[0] as File;
   }
-
-  exportToJSON(data: any) {
-    return JSON.stringify(data);
-  }
-
-  downloadFile(data: any, filename: string): void {
-    const blob = new Blob([data], { type: 'application/json' });
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = filename;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    window.URL.revokeObjectURL(url);
-  }
-
 
   exportData(): void {
-    this.downloadFile(this.exportToJSON(this.account), 'exported-data.json');
-  }
+    if (this.selectedFile) {
+      const reader = new FileReader();
 
+      reader.onload = (event) => {
+        const arrayBuffer = event.target?.result as ArrayBuffer;
+        const data = new Uint8Array(arrayBuffer);
+        const workbook = XLSX.read(data, { type: 'array' });
+
+        // Assuming you have a single sheet in the Excel file
+        const sheetName = workbook.SheetNames[0];
+        const worksheet = workbook.Sheets[sheetName];
+
+        // Convert worksheet to JSON
+        const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+        const res = jsonData.filter((i: any) => i.length !== 0)
+        this.res = res;
+        console.log( res);
+      };
+
+      reader.readAsArrayBuffer(this.selectedFile);
+    } else {
+      console.error('No file selected.');
+    }
+  }
 }
