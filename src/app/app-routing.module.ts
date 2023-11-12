@@ -27,9 +27,11 @@ import { MaterialsTableComponent } from './materials-table/materials-table.compo
 import { ValidatorComponent } from './validator/validator.component';
 import { LastDayComponent } from './last-day/last-day.component';
 import { IndexedDBComponent } from './indexed-db/indexed-db.component';
+import { DownloadComponent } from './download/download.component';
 
 const routes: Routes = [
   {path:"" , component: ScrollComponent },
+  {path:"download" , component: DownloadComponent },
   {path:"indexed" , component: IndexedDBComponent },
   {path:"last-day" , component: LastDayComponent },
   {path:"validator" , component: ValidatorComponent },

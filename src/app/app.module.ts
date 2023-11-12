@@ -44,6 +44,7 @@ import { ValidatorComponent } from './validator/validator.component';
 import { LastDayComponent } from './last-day/last-day.component';
 import { IndexedDBComponent } from './indexed-db/indexed-db.component';
 import { IndexeddbService } from './services/indexeddb.service';
+import { DownloadComponent } from './download/download.component';
 
 
 @NgModule({
@@ -80,7 +81,8 @@ import { IndexeddbService } from './services/indexeddb.service';
     MaterialsTableComponent,
     ValidatorComponent,
     LastDayComponent,
-    IndexedDBComponent
+    IndexedDBComponent,
+    DownloadComponent,
   ],
   imports: [
     BrowserAnimationsModule,
