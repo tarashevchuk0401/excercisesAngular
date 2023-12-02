@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { ChildComponent } from './child/child.component';
 
 @Component({
   selector: 'app-parent',
@@ -7,12 +8,10 @@ import { Component } from '@angular/core';
 })
 export class ParentComponent {
 
-  fromP:string = 'fromP'
-  inputValue: string = 'init'
-  test3P:string = 'test3';
-  output: string = ''
+ @ViewChild(ChildComponent) child? : ChildComponent;
 
-  parentFn(text: string){
-   this.output = text
-  }
+ increment(){
+  this.child?.increment()
+ }
+  
 }

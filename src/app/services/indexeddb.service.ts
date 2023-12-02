@@ -14,6 +14,8 @@ export class IndexeddbService {
   constructor(private http: HttpClient) { }
 
   openDB(): Observable<any> {
+
+
     return new Observable((observer) => {
       const request = indexedDB.open(this.dbName, this.version);
 

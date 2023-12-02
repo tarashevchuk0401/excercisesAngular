@@ -8,15 +8,9 @@ import { Event } from '@material-ui/icons';
 })
 export class ChildComponent {
 
-  output: string = 'out1';
+  count: number = 0;
 
- @Input() toC = '';
- @Input() test3C = '';
-
- @Output() out1 = new EventEmitter<string>();
-
- showText(){
-  this.out1.emit(this.output)
- }
-
+  increment(){
+    this.count++;
+  }
 }
