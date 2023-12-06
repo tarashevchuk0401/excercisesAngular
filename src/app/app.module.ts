@@ -45,6 +45,7 @@ import { LastDayComponent } from './last-day/last-day.component';
 import { IndexedDBComponent } from './indexed-db/indexed-db.component';
 import { IndexeddbService } from './services/indexeddb.service';
 import { DownloadComponent } from './download/download.component';
+import { SandboxComponent } from './sandbox/sandbox.component';
 
 
 @NgModule({
@@ -83,6 +84,7 @@ import { DownloadComponent } from './download/download.component';
     LastDayComponent,
     IndexedDBComponent,
     DownloadComponent,
+    SandboxComponent,
   ],
   imports: [
     BrowserAnimationsModule,

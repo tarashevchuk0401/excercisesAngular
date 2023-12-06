@@ -28,9 +28,11 @@ import { ValidatorComponent } from './validator/validator.component';
 import { LastDayComponent } from './last-day/last-day.component';
 import { IndexedDBComponent } from './indexed-db/indexed-db.component';
 import { DownloadComponent } from './download/download.component';
+import { SandboxComponent } from './sandbox/sandbox.component';
 
 const routes: Routes = [
   {path:"" , component: ScrollComponent },
+  {path:"sandbox" , component: SandboxComponent },
   {path:"download" , component: DownloadComponent },
   {path:"indexed" , component: IndexedDBComponent },
   {path:"last-day" , component: LastDayComponent },
