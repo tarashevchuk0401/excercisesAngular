@@ -12,7 +12,7 @@ export class SandboxComponent {
 
   getCommitHash() {
     // let rcommit =  git.short();
-    // console.log(rcommit)
+    // console.log(commit)
   }
 
 }
