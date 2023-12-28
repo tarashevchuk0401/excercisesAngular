@@ -27,7 +27,7 @@ export class ScrollComponent implements OnInit {
   }
 
   navigateTo(sectionHome: HTMLElement) {
-    const yOffset = sectionHome.offsetTop - 50;
+    const yOffset = sectionHome.offsetTop -50;
     window.scrollTo({
       top: yOffset
     })

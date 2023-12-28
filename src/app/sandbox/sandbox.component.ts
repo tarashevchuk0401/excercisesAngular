@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Observable, Subscription, interval, take, takeUntil } from 'rxjs';
 // import * as git from 'git-rev-sync';
 
 
@@ -7,12 +8,15 @@ import { Component } from '@angular/core';
   templateUrl: './sandbox.component.html',
   styleUrls: ['./sandbox.component.scss']
 })
-export class SandboxComponent { 
+export class SandboxComponent implements OnInit {
   commit: string = '';
+  interval = interval(1000)
+  numbers = interval(1000);
 
-  getCommitHash() {
-    // let rcommit =  git.short();
-    // console.log(commit)
+  constructor() {
   }
 
+  ngOnInit(): void {
+    // this.interval.pipe().subscribe(d => console.log(d))
+  }
 }
